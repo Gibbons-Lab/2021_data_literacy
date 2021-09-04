@@ -1,0 +1,8 @@
+"0","library(openxlsx)"
+"0",""
+"0","write.xlsx(list("
+"0","  `phyla percentages` = dcast("
+"0","    relative, subject + days_since_fmt + description ~ phylum, "
+"0","    value.var = ""relative"", fill=0),"
+"0","  `Bray-Curtis ordination` = ord_nice"
+"0","), ""cdiff_fmt.xlsx"", overwrite = T)"

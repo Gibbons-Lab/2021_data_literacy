@@ -1,0 +1,6 @@
+"0","library(mbtools)"
+"0",""
+"0","ps <- readRDS(""phyloseq.rds"")"
+"0","ps <- tax_glom(ps, ""Genus"")"
+"0","sample_names(ps) <- gsub(""_1"", """", sample_names(ps))"
+"0","ps <- subset_samples(ps, sample_sums(ps) > 1000)"

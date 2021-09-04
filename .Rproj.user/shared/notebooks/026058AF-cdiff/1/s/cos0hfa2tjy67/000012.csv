@@ -1,0 +1,5 @@
+"0",""
+"0","ord_nice = as.data.frame(ord$vectors[, 1:2])"
+"0","ord_nice <- cbind(ord_nice, sample_data(ps)[, c(""animations_subject"", ""Tissue"", ""description"", ""day_relative_to_fmt"")])"
+"0","names(ord_nice) <- c(""x"", ""y"", ""subject"", ""tissue"", ""description"", ""days_since_fmt"")"
+"0","ord_nice"

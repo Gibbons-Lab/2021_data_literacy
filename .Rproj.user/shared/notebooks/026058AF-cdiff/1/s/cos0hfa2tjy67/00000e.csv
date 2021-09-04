@@ -1,0 +1,18 @@
+"0","theme_set(theme_minimal())"
+"0",""
+"0","ord <- ps %>% rarefy_even_depth() %>% ordinate(method=""PCoA"")"
+"2","You set `rngseed` to FALSE. Make sure you've set & recorded
+ the random seed of your session for reproducibility.
+See `?set.seed`
+
+"
+"2","...
+"
+"2","21OTUs were removed because they are no longer 
+present in any sample after random subsampling
+
+"
+"2","...
+"
+"0","plot_ordination(ps, ord, color = ""animations_subject"", label = ""day_relative_to_fmt"") +"
+"0","  labs(color = ""sample source"")"
