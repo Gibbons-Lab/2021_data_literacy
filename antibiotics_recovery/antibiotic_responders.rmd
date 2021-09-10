@@ -89,7 +89,7 @@ openxlsx::write.xlsx(
     `Alpha Diversity (wide)` = dcast(diversity[order(sample_id, stage)], 
                               sample_id + Status + country ~ stage,
                               value.var = "diversity"),
-    `Alpha Diversity (long)` = diversity,
+    `Alpha Diversity (long)` = diversity[order(sample_id, stage)],
     `Keystone Taxa Singapore` = singapore[, keystone_vars, with=F],
     `Keystone Taxa Canada` = canada[, keystone_vars, with=F],
     Singapore = singapore, 
