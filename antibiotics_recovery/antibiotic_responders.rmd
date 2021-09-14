@@ -86,9 +86,10 @@ keystone_vars <- c("ID", "sample_id", "stage", "Status",
                    "Bacteroides_thetaiotaomicron", "Bifidobacterium_adolescentis")
 openxlsx::write.xlsx(
   list(
-    `Alpha Diversity` = dcast(diversity[order(sample_id, stage)], 
+    `Alpha Diversity (wide)` = dcast(diversity[order(sample_id, stage)], 
                               sample_id + Status + country ~ stage,
                               value.var = "diversity"),
+    `Alpha Diversity (long)` = diversity[order(sample_id, stage)],
     `Keystone Taxa Singapore` = singapore[, keystone_vars, with=F],
     `Keystone Taxa Canada` = canada[, keystone_vars, with=F],
     Singapore = singapore, 
